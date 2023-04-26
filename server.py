@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from src.routers import  rotas_produtos
-from src.routers import  rotas_usuarios
+from src.routers import  rotas_produtos,rotas_usuarios, rotas_pedidos
+
 
 
 
@@ -25,3 +25,5 @@ app.add_middleware(CORSMiddleware,allow_origins=origins,
 app.include_router(rotas_produtos.router)
 #USUARIOS
 app.include_router(rotas_usuarios.router)
+#PEDIDOS
+app.include_router(rotas_pedidos.router)
