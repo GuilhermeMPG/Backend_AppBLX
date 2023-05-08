@@ -11,7 +11,7 @@ class Usuario(BaseModel):
     nome: str
     telefone: str
     senha: str
-    produtos: List[ProdutoResponse]
+    produtos: Optional[List[ProdutoResponse]] 
     class Config:
         orm_mode=True
     
