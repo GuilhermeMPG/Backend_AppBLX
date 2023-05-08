@@ -28,6 +28,15 @@ class Produto(BaseModel):
         orm_mode=True
 
 
+class LoginData(BaseModel):
+    senha: str
+    telefone: str
+
+
+class LoginSucesso(BaseModel):
+    usuario: UsuarioResponse
+    access_token: str
+
 
 
 class Pedido(BaseModel):
